@@ -1,11 +1,17 @@
-import React from "react";
+// import React from "react";
+import {useParams} from 'react-router-dom'
+import harvardArt from "../../data/harvardArt";
 
-const GalleryView = () => {
+const GalleryView = ({galleries}) => {
+    const {galleryId} = useParams();
+    const gallery = galleries.find(((gallery) =>{
+       return gallery.id === parseInt(galleryId)
+    }))
     return(
 
-        <h1>
-            test case 
-        </h1>
+        
+        <h1>{gallery.name}</h1>
+        
     )
 }
 

@@ -9,7 +9,7 @@ function App() {
   <GalleryNavigation galleries={harvardArt.records}/>
     <div className="page-wrapper">
     <Route exact path="/galleries/:galleryId">
-      <GalleryView/>
+      <GalleryView galleries={harvardArt.records} />
     </Route>
     </div>
 
