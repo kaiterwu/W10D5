@@ -1,10 +1,24 @@
 import harvardArt from "./data/harvardArt";
+import GalleryNavigation from "./components/GalleryNavigation";
+import {NavLink} from 'react-router-dom';
 
-function App() {
+function App(galleries) {
   return (
-    <h1>Hello from App</h1>
-   
+    <>
+    <GalleryNavigation galleries={harvardArt.records}/>
+    <NavLink
+      to="/"
+      className={isActive =>
+      "nav-link" + (!isActive ? " unselected" : "")
+  }
+    >
+      Home
+    </NavLink>
+    </>
+    // console.log(galleries)
   );
 }
 
 export default App;
+
+
