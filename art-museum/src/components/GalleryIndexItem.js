@@ -1,16 +1,17 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 const GalleryIndexItem = (props) =>{
     return(
         <li>
-            <Link
+            <NavLink
                 to = {`/index/${props.gallery.id}`}
-                className ='gallery-item'
+                className={isActive =>
+                    "nav-link" + (!isActive ? " unselected" : "")}
                 galleries = {props}
                 >
                 {props.gallery.name}
-            </Link>
+            </NavLink>
             
         </li>
     )
