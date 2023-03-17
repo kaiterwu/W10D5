@@ -9,6 +9,7 @@ const Root = () =>{
     return(
     <BrowserRouter>
     <App/>
+    
     </BrowserRouter>
   );
 }

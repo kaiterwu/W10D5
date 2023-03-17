@@ -5,7 +5,7 @@ const GalleryIndexItem = (props) =>{
     return(
         <li>
             <NavLink
-                to = {`/index/${props.gallery.id}`}
+                to = {`/galleries/${props.gallery.id}`}
                 className={isActive =>
                     "nav-link" + (!isActive ? " unselected" : "")}
                 galleries = {props}
